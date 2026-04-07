@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Щипанов Кирилл – психолог для ветеранов</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; color:#333; }
+  header { background:#2c3e50; color:#fff; text-align:center; padding:25px 10px; }
+  header h1 { margin:0; font-size:2.5em; }
+  nav { background:#34495e; display:flex; justify-content:center; flex-wrap:wrap; padding:10px; }
+  nav a { color:#fff; text-decoration:none; margin:5px 15px; font-weight:bold; }
+  nav a:hover { text-decoration:underline; }
+  section { max-width:1000px; margin:20px auto; background:#fff; padding:30px 25px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+  h2 { color:#2c3e50; margin-bottom:15px; }
+  ul { margin:10px 0 20px 20px; }
+  .methods li { margin-bottom:10px; }
+  .reviews { margin-top:20px; }
+  .review { background:#ecf0f1; padding:15px; border-radius:10px; margin-bottom:10px; }
+  footer { background:#2c3e50; color:#fff; text-align:center; padding:15px 0; margin-top:20px; }
+  a.contact-link { color:#3498db; font-weight:bold; text-decoration:none; }
+  canvas { max-width:100%; height:auto !important; margin-top:20px; opacity:0; transition:opacity 1s ease; }
+  canvas.visible { opacity:1; }
+  button { background:#3498db; color:#fff; border:none; padding:10px 20px; border-radius:5px; cursor:pointer; font-weight:bold; }
+  button:hover { background:#2980b9; }
+  .tips { background:#ecf0f1; padding:15px; border-radius:10px; margin-top:15px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Щипанов Кирилл</h1>
+  <p>Психолог для ветеранов боевых действий – опыт 10 лет</p>
+</header>
+
+<nav>
+  <a href="#about">Обо мне</a>
+  <a href="#methods">Методы</a>
+  <a href="#charts">Прогресс</a>
+  <a href="#reviews">Отзывы</a>
+  <a href="#tips">Советы</a>
+  <a href="#contact">Контакты</a>
+</nav>
+
+<section id="about">
+  <h2>Обо мне</h2>
+  <p>Меня зовут <strong>Щипанов Кирилл</strong>. Я психолог с более чем 10-летним опытом работы с ветеранами боевых действий. Моя задача – помочь вам восстановить внутреннее равновесие, обрести уверенность в себе и адаптироваться к жизни после службы.</p>
+  <p>Я работаю с травмами различной степени, ПТСР, тревожностью и депрессией. Мой подход основан на индивидуальном внимании к каждому клиенту и научных методах психологии.</p>
+  <p>Я использую доказанные методы терапии, включая когнитивно-поведенческий подход, техники снижения стресса, психоэдукацию и поддержку семей ветеранов.</p>
+</section>
+
+<section id="methods">
+  <h2>Методы работы</h2>
+  <ul class="methods">
+    <li><strong>Индивидуальная терапия:</strong> работа над личными переживаниями, тревогой, стрессом и ПТСР.</li>
+    <li><strong>Групповые сессии:</strong> встречи с другими ветеранами для обмена опытом, взаимной поддержки и социализации.</li>
+    <li><strong>Когнитивно-поведенческая терапия:</strong> изменение негативных мыслей и паттернов поведения, формирование здоровых привычек.</li>
+    <li><strong>Практики осознанности и медитации:</strong> дыхательные техники, медитация, упражнения для снижения стресса.</li>
+    <li><strong>Психоэдукация:</strong> обучение методам самопомощи и психологической устойчивости для повседневной жизни.</li>
+  </ul>
+</section>
+
+<section id="charts">
+  <h2>Прогресс клиентов</h2>
+  <canvas id="clientsChart"></canvas>
+  <canvas id="successChart"></canvas>
+</section>
+
+<section id="reviews">
+  <h2>Отзывы</h2>
+  <div class="reviews">
+    <div class="review">
+      <strong>Иван П., ветеран</strong>
+      <p>Сессии помогли мне справиться с ночными кошмарами и тревогой после службы. Я научился контролировать свои эмоции.</p>
+    </div>
+    <div class="review">
+      <strong>Алексей С., ветеран</strong>
+      <p>Групповые сессии дали понимание, что я не один, есть поддержка и обмен опытом с коллегами по службе.</p>
+    </div>
+    <div class="review">
+      <strong>Михаил К., ветеран</strong>
+      <p>Когнитивно-поведенческие методы реально снижают уровень тревожности и помогают вернуться к нормальной жизни.</p>
+    </div>
+  </div>
+</section>
+
+<section id="tips">
+  <h2>Советы ветеранам</h2>
+  <div class="tips">
+    <ul>
+      <li>Регулярно занимайтесь физической активностью для снижения стресса.</li>
+      <li>Общайтесь с коллегами и близкими, не изолируйте себя.</li>
+      <li>Практикуйте дыхательные упражнения и медитацию хотя бы 10 минут в день.</li>
+      <li>Следите за режимом сна и питания.</li>
+      <li>Не стесняйтесь обращаться за психологической помощью при первых симптомах тревожности или депрессии.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Контакты для записи</h2>
+  <p>Email: <a href="mailto:othsixedit@gmail.com" class="contact-link">othsixedit@gmail.com</a></p>
+  <p>Телефон: <a href="tel:+79085201190" class="contact-link">+7 908 520 11 90</a></p>
+  <button onclick="window.location.href='mailto:othsixedit@gmail.com'">Записаться на сессию</button>
+</section>
+
+<footer>
+  <p>© 2026 Щипанов Кирилл – психолог для ветеранов</p>
+</footer>
+
+<script>
+// Анимация графиков при скролле
+let clientsChartInitialized = false;
+let successChartInitialized = false;
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      if(!clientsChartInitialized){
+        const ctxClients = document.getElementById('clientsChart').getContext('2d');
+        new Chart(ctxClients, {
+          type: 'line',
+          data: {
+            labels: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+            datasets: [{
+              label: 'Количество клиентов',
+              data: [5,8,12,10,15,18,20,22,25,28,30,32],
+              borderColor: '#3498db',
+              backgroundColor: 'rgba(52,152,219,0.2)',
+              fill: true,
+              tension: 0.4
+            }]
+          },
+          options: { responsive:true, scales:{y:{beginAtZero:true}} }
+        });
+        document.getElementById('clientsChart').classList.add('visible');
+        clientsChartInitialized = true;
+      }
+      if(!successChartInitialized){
+        const ctxSuccess = document.getElementById('successChart').getContext('2d');
+        new Chart(ctxSuccess, {
+          type: 'bar',
+          data: {
+            labels: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+            datasets: [{
+              label: 'Процент успешных сессий (%)',
+              data: [85,88,90,92,90,93,95,94,96,97,98,99],
+              backgroundColor: '#2ecc71'
+            }]
+          },
+          options: { responsive:true, scales:{y:{beginAtZero:true, max:100}} }
+        });
+        document.getElementById('successChart').classList.add('visible');
+        successChartInitialized = true;
+      }
+    }
+  });
+},{threshold:0.3});
+
+observer.observe(document.getElementById('charts'));
+</script>
+
+</body>
+</html>
