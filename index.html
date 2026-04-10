@@ -279,14 +279,26 @@ sec.classList.add("visible");
 
 new Chart(document.getElementById('clientsChart'), {
 type:'line',
-data:{labels:['Янв','Фев','Мар','Апр','Май','Июн'],
-datasets:[{data:[5,10,15,20,25,30],borderColor:'#00d4ff'}]}
+data:{
+labels:['Янв','Фев','Мар','Апр','Май','Июн'],
+datasets:[{
+label:'Количество клиентов',
+data:[5,10,15,20,25,30],
+borderColor:'#00d4ff'
+}]
+}
 });
 
 new Chart(document.getElementById('successChart'), {
 type:'bar',
-data:{labels:['Янв','Фев','Мар','Апр','Май'],
-datasets:[{data:[85,90,92,94,96],backgroundColor:'#00ffa3'}]}
+data:{
+labels:['Янв','Фев','Мар','Апр','Май'],
+datasets:[{
+label:'Успешность сессий (%)',
+data:[40,50,65,80,82],
+backgroundColor:'#00ffa3'
+}]
+}
 });
 
 function sendMessage(e){
